@@ -1,15 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect } from 'react';
-import { Tween } from 'react-gsap';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 function App() {
-	useEffect(() => {}, []);
+	const ref = useRef(null);
+
+	useEffect(() => {
+		const element = ref.current;
+		gsap.core.Tween.to(element.querySelector('.circle'), 2, {
+			x: 150,
+			y: 150,
+			background: 'blue',
+			ease: 'easeInOut',
+		});
+	}, []);
 
 	return (
-		<Tween to={{ x: 150, y: 150, background: 'blue' }} duration={2} ease='back.out(1.7)'>
+		<div className='main' ref={ref}>
 			<div className='circle' />
-		</Tween>
+		</div>
 	);
 }
 
