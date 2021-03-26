@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.circle {
+  background-color: orangered;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.circle {
+  background-color: orangered;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}

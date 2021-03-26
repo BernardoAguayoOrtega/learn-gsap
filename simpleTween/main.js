@@ -1,1 +1,1 @@
-TweenMax.to('.circle', 10, { x: 150 });
+TweenMax.to('.circle', 4, { x: 150, y: 150, background: 'blue' });
