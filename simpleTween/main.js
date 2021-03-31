@@ -15,3 +15,6 @@ TweenMax.to('.square', 2, {
 
 // from
 TweenMax.from('#rectangle', 2, { y: 200, rotation: 360, scale: -1.5 });
+
+// from
+TweenMax.from('li:nth-child(2)', 2, { y: 200 });

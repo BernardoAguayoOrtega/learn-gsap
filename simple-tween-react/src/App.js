@@ -11,14 +11,14 @@ function App() {
 		TweenMax.to(element.querySelector('.circle'), 2, {
 			x: 150,
 			y: 150,
-			background_: 'blue',
+			background: 'blue',
 			ease: Back.easeInOut,
 		});
 
 		TweenMax.to(element.querySelector('.square'), 2, {
 			x: -150,
 			y: -150,
-			background_: 'yellow',
+			background: 'yellow',
 			scale: 2,
 			ease: Back.easeOut,
 		});
@@ -28,6 +28,16 @@ function App() {
 			rotation: 360,
 			scale: -1.5,
 		});
+
+		TweenMax.from(element.querySelector('ul'), 2, {
+			x: 200,
+			rotation: 180,
+			scale: -1.1,
+		});
+
+		TweenMax.to(element.querySelector('li:nth-child(2)'), 2, {
+			color: 'red',
+		});
 	}, []);
 
 	return (
@@ -35,6 +45,10 @@ function App() {
 			<div className='circle' />
 			<div className='square' />
 			<div id='rectangle' />
+			<ul>
+				<li>random2</li>
+				<li>random3</li>
+			</ul>
 		</div>
 	);
 }

@@ -12,13 +12,6 @@ body {
   border-radius: 50%;
 }
 
-.circle {
-  background-color: orangered;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-}
-
 .square {
   width: 150px;
   height: 150px;
