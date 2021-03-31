@@ -5,9 +5,15 @@ import { TimelineMax, Power4, TweenMax, Back } from 'gsap/all';
 function App() {
 	const ref = useRef(null);
 	const tl = new TimelineMax();
+	const tl2 = new TimelineMax();
 
 	useEffect(() => {
 		const element = ref.current;
+
+		tl2
+			.to(element.querySelector('.oval'), 1, { x: 100 })
+			.to(element.querySelector('.oval'), 1, { x: -100 });
+
 		tl.to(element.querySelector('.circle'), 1, { x: 100, ease: Power4.easeOut })
 			.to(element.querySelector('.square'), 1, { x: 100, ease: Power4.easeOut })
 			.to(element.querySelector('.rectangle'), 1, {
