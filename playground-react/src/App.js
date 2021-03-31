@@ -1,90 +1,99 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useRef } from 'react';
+import TweenMax from 'gsap';
 
 function App() {
+	const ref = useRef(null);
+
+	useEffect(() => {
+		const element = ref.current;
+
+		TweenMax.to(element.querySelector('.circle'), 1, { x: 100 });
+	}, []);
+
 	return (
-		<div className='App'>
-			<div class='row row1'>
-				<div class='column col1'>
+		<div className='App' ref={ref}>
+			<div className='row row1'>
+				<div className='column col1'>
 					<p>Panel 1 (.circle)</p>
-					<div class='circle shape'></div>
+					<div className='circle shape'></div>
 				</div>
-				<div class='column col2'>
+				<div className='column col2'>
 					<p>Panel 2 (.square)</p>
-					<div class='square shape'></div>
+					<div className='square shape'></div>
 				</div>
-				<div class='column col3'>
+				<div className='column col3'>
 					<p>Panel 3 (.rectangle)</p>
-					<div class='rectangle shape'></div>
+					<div className='rectangle shape'></div>
 				</div>
 			</div>
 
-			<div class='row row2'>
-				<div class='column col4'>
+			<div className='row row2'>
+				<div className='column col4'>
 					<p>Panel 4 (.triangle)</p>
-					<div class='triangleContainer'>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
-						<div class='triangle shape'></div>
+					<div className='triangleContainer'>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
+						<div className='triangle shape'></div>
 					</div>
 				</div>
-				<div class='column col5'>
+				<div className='column col5'>
 					<p>Panel 5 (.oval)</p>
-					<div class='oval shape'></div>
+					<div className='oval shape'></div>
 				</div>
-				<div class='column col6'>
+				<div className='column col6'>
 					<p>Panel 6 (.pacman)</p>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
-					<div class='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
+					<div className='pacman shape'></div>
 				</div>
 			</div>
 
-			<div class='playback_controls_row'>
-				<a href='#0' class='playbackButton playButton'>
+			<div className='playback_controls_row'>
+				<a href='#0' className='playbackButton playButton'>
 					Play
 				</a>
-				<a href='#0' class='playbackButton pauseButton'>
+				<a href='#0' className='playbackButton pauseButton'>
 					Pause
 				</a>
-				<a href='#0' class='playbackButton resumeButton'>
+				<a href='#0' className='playbackButton resumeButton'>
 					Resume
 				</a>
-				<a href='#0' class='playbackButton reverseButton'>
+				<a href='#0' className='playbackButton reverseButton'>
 					Reverse
 				</a>
-				<a href='#0' class='playbackButton slowButton'>
+				<a href='#0' className='playbackButton slowButton'>
 					Slow
 				</a>
-				<a href='#0' class='playbackButton fastButton'>
+				<a href='#0' className='playbackButton fastButton'>
 					Fast
 				</a>
-				<a href='#0' class='playbackButton seekButton'>
+				<a href='#0' className='playbackButton seekButton'>
 					Seek
 				</a>
-				<a href='#0' class='playbackButton progressButton'>
+				<a href='#0' className='playbackButton progressButton'>
 					Progress
 				</a>
 			</div>
