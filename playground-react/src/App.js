@@ -9,8 +9,8 @@ function App() {
 		const element = ref.current;
 
 		TweenMax.to(element.querySelector('.circle'), 1, { x: 100 });
-		TweenMax.to(element.querySelector('.square'), 1, { x: 100 });
-		TweenMax.to(element.querySelector('.rectangle'), 1, { x: 100 });
+		TweenMax.to(element.querySelector('.square'), 1, { x: 100, delay: 1 });
+		TweenMax.to(element.querySelector('.rectangle'), 1, { x: 100, delay: 2 });
 	}, []);
 
 	return (
