@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useRef } from 'react';
-import TweenMax from 'gsap';
+import { TweenMax } from 'gsap/all';
 
 function App() {
 	const ref = useRef(null);
@@ -9,6 +9,8 @@ function App() {
 		const element = ref.current;
 
 		TweenMax.to(element.querySelector('.circle'), 1, { x: 100 });
+		TweenMax.to(element.querySelector('.square'), 1, { x: 100 });
+		TweenMax.to(element.querySelector('.rectangle'), 1, { x: 100 });
 	}, []);
 
 	return (
