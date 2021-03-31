@@ -1,16 +1,16 @@
 import './App.css';
 import { useEffect, useRef } from 'react';
-import { TweenMax } from 'gsap/all';
+import { TweenMax, TimelineMax } from 'gsap/all';
 
 function App() {
 	const ref = useRef(null);
+	const tl = new TimelineMax();
 
 	useEffect(() => {
 		const element = ref.current;
-
-		TweenMax.to(element.querySelector('.circle'), 1, { x: 100 });
-		TweenMax.to(element.querySelector('.square'), 1, { x: 100, delay: 1 });
-		TweenMax.to(element.querySelector('.rectangle'), 1, { x: 100, delay: 2 });
+		tl.to(element.querySelector('.circle'), 1, { x: 100 })
+			.to(element.querySelector('.square'), 1, { x: 100 })
+			.to(element.querySelector('.rectangle'), 1, { x: 100 });
 	}, []);
 
 	return (
