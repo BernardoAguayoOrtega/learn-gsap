@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useRef } from 'react';
-import { TimelineMax, Power4 } from 'gsap/all';
+import { TimelineMax, Power4, TweenMax, Back } from 'gsap/all';
 
 function App() {
 	const ref = useRef(null);
@@ -14,6 +14,17 @@ function App() {
 				x: 100,
 				ease: Power4.easeOut,
 			});
+
+		TweenMax.to(element.querySelectorAll('.triangle'), 10, {
+			borderBottom: '25px solid red',
+		});
+
+		TweenMax.staggerFrom(
+			element.querySelectorAll('.triangle'),
+			1,
+			{ x: -100, y: -100, opacity: 0, ease: Back.easeInOut },
+			0.2,
+		);
 	}, []);
 
 	return (
