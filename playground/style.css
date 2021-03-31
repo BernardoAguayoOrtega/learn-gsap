@@ -1,0 +1,131 @@
+body {
+  padding: 0;
+  margin: 0;
+  }
+  
+  .row {
+  height:44vh;
+  display:flex;
+  flex-flow: row wrap;
+  }
+  
+  .row p {
+  color: #fff;    
+  font-family: arial;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  align-self:flex-start;
+  }
+  
+  .column {
+  flex: 1;    
+  display:flex;
+  padding-top: 10px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow:hidden;
+  }
+  
+  .col1 {
+  background-color: #1a0e2d;    
+  }
+  
+  .col2 {
+  background-color: #101e33;    
+  }
+  
+  .col3 {
+  background-color: #072818;
+  }
+  
+  .col4 {
+  background-color: #453a02;    
+  }
+  
+  .col5 {
+  background-color: #a23918;    
+  }
+  
+  .col6 {
+  background-color: #44110a;    
+  }
+  
+  .playback_controls_row {
+  height:12vh;    
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .playbackButton {
+      text-decoration: none;
+      background-color: #292828;
+      color: white;
+      padding: 10px 35px;
+      border-radius: 5px;
+      font-family: arial;
+      display: inline-block;
+      margin-right: 15px;  
+  }
+  
+  /*Shapes*/
+  
+  .circle {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius:50%;
+  }
+  
+  .square {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  }
+  
+  .rectangle {
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+  }
+  
+  .oval {
+  width: 100px;
+  height: 50px;
+  background: #fff;
+  border-radius: 100px / 50px;    
+  }
+  
+  .triangleContainer {
+  display:flex;
+  flex-flow: row wrap;
+  max-width:75%;
+  }
+  
+  .triangle {
+  width: 0;
+  height: 0;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-left: 12.5px solid transparent;
+  border-right: 12.5px solid transparent;
+  border-bottom: 25px solid #fff;
+  /*flex:1;*/
+  }
+  
+  .pacman {
+        width: 0px;
+        height: 0px;
+        border-right: 20px solid transparent;
+        border-top: 20px solid #fff;
+        border-left: 20px solid #fff;
+        border-bottom: 20px solid #fff;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+  }
+    
