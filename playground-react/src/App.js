@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useRef } from 'react';
-import { TweenMax, TimelineMax } from 'gsap/all';
+import { TimelineMax, Power4 } from 'gsap/all';
 
 function App() {
 	const ref = useRef(null);
@@ -8,9 +8,12 @@ function App() {
 
 	useEffect(() => {
 		const element = ref.current;
-		tl.to(element.querySelector('.circle'), 1, { x: 100 })
-			.to(element.querySelector('.square'), 1, { x: 100 })
-			.to(element.querySelector('.rectangle'), 1, { x: 100 });
+		tl.to(element.querySelector('.circle'), 1, { x: 100, ease: Power4.easeOut })
+			.to(element.querySelector('.square'), 1, { x: 100, ease: Power4.easeOut })
+			.to(element.querySelector('.rectangle'), 1, {
+				x: 100,
+				ease: Power4.easeOut,
+			});
 	}, []);
 
 	return (

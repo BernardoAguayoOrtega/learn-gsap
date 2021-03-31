@@ -4,6 +4,6 @@
 
 let tlAnimation = new TimelineMax();
 tlAnimation
-	.to('.circle', 1.5, { x: 100 })
-	.to('.square', 1, { x: 100 })
-	.to('.rectangle', 0.7, { x: 100 });
+	.to('.circle', 1, { x: 100, ease: Power2.easeIn })
+	.to('.square', 1, { x: 100, ease: Power2.easeIn })
+	.to('.rectangle', 1, { x: 100, ease: Power2.easeIn });
