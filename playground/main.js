@@ -10,6 +10,10 @@ tlAnimation
 
 TweenMax.staggerFrom('.triangle', 1, { x: -100, y: -100, opacity: 0 }, 0.2);
 
-const secondTlAnimation = new TimelineMax();
+const secondTlAnimation = new TimelineMax({
+	repeat: -1,
+	repeatDelay: 2,
+	yoyo: true,
+});
 
 secondTlAnimation.to('.oval', 1, { x: 100 }).to('.oval', 1, { x: -100 });

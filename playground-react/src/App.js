@@ -4,15 +4,13 @@ import { TimelineMax, Power4, TweenMax, Back } from 'gsap/all';
 
 function App() {
 	const ref = useRef(null);
-	const tl = new TimelineMax();
-	const tl2 = new TimelineMax();
+	const tl = new TimelineMax({ repeat: -1, repeatDelay: 2, yoyo: true });
+	const tl2 = new TimelineMax({ repeat: -1, yoyo: true });
 
 	useEffect(() => {
 		const element = ref.current;
 
-		tl2
-			.to(element.querySelector('.oval'), 1, { x: 100 })
-			.to(element.querySelector('.oval'), 1, { x: -100 });
+		tl2.to(element.querySelector('.oval'), 1, { x: 100 });
 
 		tl.to(element.querySelector('.circle'), 1, { x: 100, ease: Power4.easeOut })
 			.to(element.querySelector('.square'), 1, { x: 100, ease: Power4.easeOut })
@@ -28,7 +26,7 @@ function App() {
 		TweenMax.staggerFrom(
 			element.querySelectorAll('.triangle'),
 			1,
-			{ x: -100, y: -100, opacity: 0, ease: Back.easeInOut },
+			{ x: -100, y: -100, opacity: 0, ease: Back.easeInOut, repeat: -1, yoyo: true },
 			0.2,
 		);
 	}, []);
