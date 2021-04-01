@@ -10,6 +10,8 @@ tlAnimation
 
 TweenMax.staggerFrom('.triangle', 1, { x: -100, y: -100, opacity: 0 }, 0.2);
 
+TweenMax.staggerFrom('.pacman', 1, { x: 100, y: 100, opacity: 0 }, 0.2);
+
 const secondTlAnimation = new TimelineMax({
 	repeat: -1,
 	repeatDelay: 2,
@@ -17,3 +19,7 @@ const secondTlAnimation = new TimelineMax({
 });
 
 secondTlAnimation.to('.oval', 1, { x: 100 }).to('.oval', 1, { x: -100 });
+
+const tlShapes = new TimelineMax();
+
+tlShapes.staggerFrom('.shape', 0.5, { x: 50, y: 50, opacity: 0 }), 0.2;
