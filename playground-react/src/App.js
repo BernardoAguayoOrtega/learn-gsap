@@ -12,12 +12,22 @@ function App() {
 
 		tl2.to(element.querySelector('.oval'), 1, { x: 100 });
 
-		tl.to(element.querySelector('.circle'), 1, { x: 100, ease: Power4.easeOut })
+		tl.to(
+			element.querySelector('.circle'),
+			1,
+			{ x: 100, ease: Power4.easeOut },
+			'circleRectangle',
+		)
 			.to(element.querySelector('.square'), 1, { x: 100, ease: Power4.easeOut })
-			.to(element.querySelector('.rectangle'), 1, {
-				x: 100,
-				ease: Power4.easeOut,
-			});
+			.to(
+				element.querySelector('.rectangle'),
+				1,
+				{
+					x: 100,
+					ease: Power4.easeOut,
+				},
+				'circleRectangle',
+			);
 
 		TweenMax.to(element.querySelectorAll('.triangle'), 10, {
 			borderBottom: '25px solid red',
@@ -26,7 +36,14 @@ function App() {
 		TweenMax.staggerFrom(
 			element.querySelectorAll('.triangle'),
 			1,
-			{ x: -100, y: -100, opacity: 0, ease: Back.easeInOut, repeat: -1, yoyo: true },
+			{
+				x: -100,
+				y: -100,
+				opacity: 0,
+				ease: Back.easeInOut,
+				repeat: -1,
+				yoyo: true,
+			},
 			0.2,
 		);
 	}, []);

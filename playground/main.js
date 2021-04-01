@@ -4,9 +4,9 @@
 
 const tlAnimation = new TimelineMax();
 tlAnimation
-	.to('.circle', 1, { x: 100, ease: Power2.easeIn })
+	.to('.circle', 1, { x: 100, ease: Power2.easeIn }, 'circleRectangle')
 	.to('.square', 1, { x: 100, ease: Power2.easeIn })
-	.to('.rectangle', 1, { x: 100, ease: Power2.easeIn });
+	.to('.rectangle', 1, { x: 100, ease: Power2.easeIn }, 'circleRectangle');
 
 TweenMax.staggerFrom('.triangle', 1, { x: -100, y: -100, opacity: 0 }, 0.2);
 
